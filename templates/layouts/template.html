@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>TicTacToe game</title>
+    <link rel='stylesheet' href='assets/css/style.css' type='text/css'/>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="game-title">Tic-tac-toe</h1>
+        <h2 class="language-implementation">Program logic implemented in Go</h2>
+        <form action="/postinput" method="post">
+            <div class="game-grid">
+                <div data-cell-index="0" class="cells">
+                    {{.cellvalue1}}
+                </div>
+                <div data-cell-index="1" class="cells">
+                    {{.cellvalue2}}
+                </div>
+                <div data-cell-index="2" class="cells">
+                    {{.cellvalue3}}
+                </div>
+                <div data-cell-index="3" class="cells">
+                    {{.cellvalue4}}
+                </div>
+                <div data-cell-index="4" class="cells">
+                    {{.cellvalue5}}
+                </div>
+                <div data-cell-index="5" class="cells">
+                    {{.cellvalue6}}
+                </div>
+                <div data-cell-index="6" class="cells">
+                    {{.cellvalue7}}
+                </div>
+                <div data-cell-index="7" class="cells">
+                    {{.cellvalue8}}
+                </div>
+                <div data-cell-index="8" class="cells">
+                    {{.cellvalue9}}
+                </div>
+            </div>
+            <h3 class="game-status" >{{.gamestatus}}</h3>
+            <button type="submit" name="playButton" id="play-btn" value="" hidden>Play</button>
+            <input type="submit" name="restartButton" value="Restart Button" class="game-restart"/>
+        </form>
+    </div>
+</body>
+</html>
+
