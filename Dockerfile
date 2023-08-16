@@ -1,12 +1,14 @@
+# Using go 1.20 as the base image
 FROM golang:1.20
 
+# Declaring the working directory inside the container
 WORKDIR /usr/src/app
 
-# pre-copy/cache go.mod for pre-downloading dependencies and only redownloading them in subsequent builds if they change
+# Copying all project files to the container's /usr/src/app directory 
 COPY . /usr/src/app
+
+# Running the program's build commands and outputting (-o) the result of 'go build' to 'app'
 RUN go mod download && go mod verify && go build -o app
 
-#COPY . .
-#RUN go build -v -o /usr/local/bin/app ./...
-
+# Command to run the program
 CMD ["./app"]
